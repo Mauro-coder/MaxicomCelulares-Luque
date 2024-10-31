@@ -5,7 +5,7 @@ import ItemListContainer from './components/ItemListContainer'
 function App() {
 
   return (
-  <div>
+  <div className='headerContainer'>
     <NavBar/>
     <ItemListContainer greeting ='Bienvenidos a Maxicom Celulares' texto ='Encontra toda la variedad de celulares y accesorios'/>
   </div>

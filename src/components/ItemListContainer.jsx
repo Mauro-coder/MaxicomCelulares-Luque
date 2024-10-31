@@ -1,9 +1,8 @@
 const ItemListContainer = ({greeting, texto}) => {
-    // const {greeting} = props
     return (
-        <div>
-            <h1>{greeting}</h1>
-            <p>{texto}</p>
+        <div className="itemContainer">
+            <h1 className="h1Greeting">{greeting}</h1>
+            <p className="pTexto">{texto}</p>
         </div>
     )
 }

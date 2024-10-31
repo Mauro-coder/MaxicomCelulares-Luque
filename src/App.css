@@ -1,15 +1,18 @@
+.headerContainer{
+  background-color: #fef6e4;
+}
+
 .navContainer{
   width: 100%;
   padding: 2rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: black;
 }
 
 .aLink{
-  color: white;
-  font-weight: 500;
+  color: #001858;
+  font-weight: 700;
   text-decoration: none;
 }
 
@@ -27,4 +30,14 @@
   color: blueviolet;
   font-size: 1rem;
   font-weight: 500;
+}
+
+.h1Greeting{
+  text-align: center;
+  color: #001858;
+}
+
+.pTexto{
+  text-align: center;
+  color: #172c66;
 }
