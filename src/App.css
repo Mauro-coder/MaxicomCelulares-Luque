@@ -41,3 +41,13 @@
   text-align: center;
   color: #172c66;
 }
+
+.cardimage{
+  max-width: 350px;
+  max-height: 375px;
+}
+
+.cardsContainer{
+  display: flex;
+  flex-direction: row;
+}
