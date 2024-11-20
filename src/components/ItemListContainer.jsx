@@ -2,6 +2,7 @@
 import React, {useState, useEffect} from 'react'
 import { getProducts } from '../mock/data'
 import ItemCount from './ItemCount'
+import ItemList from './ItemList'
 
 const ItemListContainer = ({greeting, texto}) => {
     const [products, setProducts] = useState([])
@@ -27,7 +28,7 @@ const ItemListContainer = ({greeting, texto}) => {
         <div className="itemContainer">
             <h1 className="h1Greeting">{greeting}</h1>
             <p className="pTexto">{texto}</p>
-            {loading ? <p>Cargando...</p> : products.map((product)=> <p key={product.id}>{product.name}</p>)}
+            {loading ? <p>Cargando...</p> : <ItemList products={products}/>}
             <ItemCount stock={12} onAdd ={onAdd}/>
         </div>
     )
