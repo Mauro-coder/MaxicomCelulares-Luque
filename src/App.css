@@ -1,3 +1,8 @@
+img{
+  max-width: 350px;
+  max-height: 375px;
+}
+
 .headerContainer{
   background-color: #fef6e4;
 }

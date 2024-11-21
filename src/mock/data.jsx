@@ -1,6 +1,6 @@
 const productos = [
     {
-        id:'xiaomi_note',
+        id:'1',
         name:'Xiaomi Redmi Note 13',
         stock: 10,
         price: 275000,
@@ -9,7 +9,7 @@ const productos = [
         category: 'celulares'
     },
     {
-        id:'samsung_galaxy',
+        id:'2',
         name:'Samsung Galaxy A15',
         stock: 5,
         price: 329999,
@@ -18,7 +18,7 @@ const productos = [
         category: 'celulares'
     },
     {
-        id:'motorola_g24',
+        id:'3',
         name:'Motorola Moto G24',
         stock: 7,
         price: 315999,
@@ -27,7 +27,7 @@ const productos = [
         category: 'celulares'
     },
     {
-        id:'moto_razr',
+        id:'4',
         name:'Motorola Razr',
         stock: 4,
         price: 1299999,
@@ -46,7 +46,20 @@ export const getProducts = () => {
             }else{
                 resolve(productos)
             }
-        },3000)
+        },2000)
     })
 }
 
+export const getOneProduct = (id) =>{
+    let error = false
+    return new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            if(error){
+                reject('Hubo un error')
+            }else{
+                let onProduct = productos.find((item)=> item.id === id)
+                resolve(onProduct)
+            }
+        },2000)
+    })
+}
