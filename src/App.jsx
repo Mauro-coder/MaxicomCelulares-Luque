@@ -1,13 +1,15 @@
 import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from "./components/NavBar";
 import ItemListContainer from "./components/ItemListContainer";
 import Cards from "./components/Cards";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NavbarReactBootstrap from "./components/NavbarReactBootstrap";
 
 function App() {
   return (
     <BrowserRouter>
-      <NavBar />
+      <NavbarReactBootstrap/>
       <Routes>
         <Route
           path="/"
