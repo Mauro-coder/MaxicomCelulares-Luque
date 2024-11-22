@@ -41,7 +41,7 @@ const productos = [
         stock: 25,
         price: 74999,
         description: 'Mayor Duración de Bateria.',
-        img: '/moto_bud.png',
+        img: '/moto_bud.webp',
         category: 'accesorios'
     },
     {
