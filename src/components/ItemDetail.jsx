@@ -10,14 +10,6 @@ const ItemDetail = ({producto}) => {
   const onAdd = (cantidad) => {
         alert(`Agregaste al carrito ${cantidad} productos`)
         setCompra(true)
-        // let cartItem = {
-        //   name: producto.name,
-        //   img: producto.img,
-        //   price: producto.price,
-        //   stock: producto.stock,
-        //   id: producto.id
-        // }
-        //   addToCart(cartItem, cantidad)
         addToCart(producto, cantidad)
     }
   return (

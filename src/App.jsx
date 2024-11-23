@@ -5,6 +5,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavbarReactBootstrap from "./components/NavbarReactBootstrap";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import { CartProvider } from "./context/CartContext";
+import CartView from "./components/CartView";
+import Error from "./components/Error";
 
 function App() {
   return (
@@ -30,7 +32,9 @@ function App() {
             />
           }
         />
+        <Route path='/cart' element={<CartView/>}/>
         <Route path="/item/:id" element={<ItemDetailContainer />} />
+        <Route path='*' element={<Error/>}/>
       </Routes>
     </BrowserRouter>
     </CartProvider>

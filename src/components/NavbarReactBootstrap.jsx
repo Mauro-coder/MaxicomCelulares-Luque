@@ -20,10 +20,8 @@ function NavbarReactBootstrap() {
               <NavDropdown.Divider/>
               <NavDropdown.Item as={NavLink} to='/productos/articulos varios'>Articulos Varios</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link as={NavLink} to='/'>Nosotros</Nav.Link>
-            <Nav.Link as={NavLink} to='/'>Contacto</Nav.Link>
           </Nav>  
-          <CartWidgetReactIcons/>
+          <NavLink to='/cart' style={{textDecoration:'none'}}><CartWidgetReactIcons/></NavLink>
         </Navbar.Collapse>
       </Container>
     </Navbar>

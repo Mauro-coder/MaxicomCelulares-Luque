@@ -2,11 +2,13 @@ import { BsCart4 } from "react-icons/bs";
 import { Badge } from "react-bootstrap";
 import { useCart } from "../context/CartContext";
 const CartWidgetReactIcons = () =>{
-    const {cart} = useCart()
-    console.log(cart)
+    const {cartQuantity} = useCart()
+    
     return(
-        <><Badge bg="danger">15</Badge>
-        <BsCart4 fontSize={'2.5rem'} color='violet' /></>
+        <div>
+            <BsCart4 fontSize={'1.5rem'} color='violet'/>
+           { cartQuantity() > 0 && <Badge bg="danger">{cartQuantity()}</Badge>}
+        </div>
     )
 }
 
