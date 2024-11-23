@@ -4,9 +4,11 @@ import ItemListContainer from "./components/ItemListContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavbarReactBootstrap from "./components/NavbarReactBootstrap";
 import ItemDetailContainer from "./components/ItemDetailContainer";
+import { CartProvider } from "./context/CartContext";
 
 function App() {
   return (
+    <CartProvider>
     <BrowserRouter>
       <NavbarReactBootstrap />
       <Routes>
@@ -31,6 +33,7 @@ function App() {
         <Route path="/item/:id" element={<ItemDetailContainer />} />
       </Routes>
     </BrowserRouter>
+    </CartProvider>
   );
 }
 
