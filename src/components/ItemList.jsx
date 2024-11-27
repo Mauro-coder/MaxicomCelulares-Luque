@@ -4,7 +4,7 @@ import Item from "./Item";
 
 const ItemList = ({products}) => {
     return (
-        <div className='d-flex justify-content-around align-items-center flex-wrap'>
+        <div style={{display:'flex',flexDirection:'row', justifyContent:'space-around', alignItems: 'center', flexWrap:'wrap', padding:'15px'}}>
             {products.map((product)=> <Item product= {product} key={product.id}/>)}
         </div>
     )
