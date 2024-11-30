@@ -1,15 +1,5 @@
-const productos = [
+export const productosDB = [
     {
-        id:'1',
-        name:'Xiaomi Redmi Note 13',
-        stock: 10,
-        price: 275000,
-        description: 'Descubrí infinitas posibilidades para tus fotos con las 3 cámaras principales de tu equipo.',
-        img: '/xiaomi_redmi_note.webp',
-        category: 'celulares'
-    },
-    {
-        id:'2',
         name:'Samsung Galaxy A15',
         stock: 5,
         price: 329999,
@@ -18,7 +8,6 @@ const productos = [
         category: 'celulares'
     },
     {
-        id:'3',
         name:'Motorola Moto G24',
         stock: 7,
         price: 315999,
@@ -27,7 +16,6 @@ const productos = [
         category: 'celulares'
     },
     {
-        id:'4',
         name:'Motorola Razr',
         stock: 4,
         price: 1299999,
@@ -36,7 +24,6 @@ const productos = [
         category: 'celulares'
     },
     {
-        id:'5',
         name:'Auriculares MotoBud',
         stock: 25,
         price: 74999,
@@ -45,7 +32,6 @@ const productos = [
         category: 'accesorios'
     },
     {
-        id:'6',
         name:'Auriculares Galaxy Buds Color Grafito',
         stock: 15,
         price: 144200,
@@ -54,7 +40,6 @@ const productos = [
         category: 'accesorios'
     },
     {
-        id:'7',
         name:'Cargador Inalambrico Celular Con Parlante',
         stock: 20,
         price: 27840,
@@ -63,7 +48,6 @@ const productos = [
         category: 'accesorios'
     },
     {
-        id:'8',
         name:'SmartWatch K37 Gps Negro',
         stock: 6,
         price: 110000,
@@ -72,7 +56,6 @@ const productos = [
         category: 'articulos varios'
     },
     {
-        id:'9',
         name:'Smartwatch Redmi Watch 5 Active Blanco',
         stock: 3,
         price: 85000,
@@ -81,7 +64,6 @@ const productos = [
         category: 'articulos varios'
     },
     {
-        id:'10',
         name:'Smartwatch HK10 Ultra 3 Wifi Plateado',
         stock: 7,
         price: 130000,
@@ -98,7 +80,7 @@ export const getProducts = () => {
             if(error){
                 reject('Hubo un error, intente nuevamente')
             }else{
-                resolve(productos)
+                resolve(productosDB)
             }
         },2000)
     })
@@ -111,7 +93,7 @@ export const getOneProduct = (id) =>{
             if(error){
                 reject('Hubo un error')
             }else{
-                let onProduct = productos.find((item)=> item.id === id)
+                let onProduct = productosDB.find((item)=> item.id === id)
                 resolve(onProduct)
             }
         },2000)
