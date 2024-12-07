@@ -2,7 +2,7 @@
 
 Este proyecto fue realizado en el curso de CoderHouse, orientado en la utilizacion de React para la creacion de un Ecommerce dedicado a la venta de celulares y diversos accesorios, la misma cuenta con distintas interacciones como los carts de cada producto, el agregado de los mismos a un carrito de compras para su posterior confirmación de la compra mediante un formulario, todo esto se carga a una base de datos desarrollada en Firebase donde se hace un control de stock y se cargan los datos brindados por el cliente.
 
-![image] (/public/...)
+![image](/public/...)
 
 ### Instalación ⚙️
 
@@ -13,7 +13,7 @@ Este proyecto fue realizado en el curso de CoderHouse, orientado en la utilizaci
 
 ### Versión HOST 💻
 
-Si desea ver el proyecto online, puede ingresar al siguiente link [Maxicom Celulares]()
+Si desea ver el proyecto online, puede ingresar al siguiente link [Maxicom Celulares](https://maxicom-celulares-luque.vercel.app)
 
 ### Librerias utilizadas en este proyecto 📚
 
@@ -26,4 +26,4 @@ Si desea ver el proyecto online, puede ingresar al siguiente link [Maxicom Celul
 
 ## Agradecimiento especial a Laura Therisod, docente del curso de React en CoderHouse y a los tutores Nicolas Smael y David Alvarez por sus correcciones y ayudas en el transcurso de la clase
 
-# Desarrollado por Mauro Luque
+# Desarrollado por Mauro Luque 
