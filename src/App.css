@@ -1,6 +1,6 @@
 img{
-  max-width: 350px;
-  max-height: 375px;
+  width: 250px;
+  height: 300px;
 }
 
 .headerContainer{
@@ -45,18 +45,4 @@ img{
 .pTexto{
   text-align: center;
   color: #172c66;
-}
-
-.cardimage{
-  max-width: 350px;
-  max-height: 375px;
-}
-
-.cardsContainer{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 30px;
- 
 }
