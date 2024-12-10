@@ -27,7 +27,12 @@ const ItemDetail = ({producto}) => {
         <p>Stock: {producto.stock}</p>
         <p>${producto.price},00</p>
   {compra
-   ? <div>
+   ? <div  style={{
+    display: "flex",
+    justifyContent: "center",
+    gap: "10px",
+    marginTop: "15px"
+  }}>
     <Link className='btn btn-dark' to='/'>Seguir Comprando</Link>
       <Link className='btn btn-dark' to='/cart'> Ir al carrito</Link>
       </div>
