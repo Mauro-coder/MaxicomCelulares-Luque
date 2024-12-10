@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react'
 import ItemDetail from './ItemDetail'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import Loader from './Loader'
 import { collection, doc, getDoc } from 'firebase/firestore'
 import { db } from '../services/firebase'
@@ -9,6 +9,7 @@ import { db } from '../services/firebase'
 const ItemDetailContainer = () => {
     const [producto, setProducto] = useState ({})
     const [loading, setLoading] = useState (false)
+    const [invalidItem, setInvalidItem]= useState(false)
     const {id} = useParams()
 
     useEffect(()=>{
@@ -19,15 +20,29 @@ const ItemDetailContainer = () => {
       const docRef = doc(CollectionProd, id)
 
       getDoc(docRef)
-      .then((res)=> setProducto({id: res.id, ...res.data()}))
+      .then((res)=> {
+        if(res.data()){
+          setProducto({id: res.id, ...res.data()})
+        }else{
+          setInvalidItem(true)
+        }
+      })
       .catch((error)=> console.log(error))
-      .finally(() => setLoading(false))
-
+      .finally(()=> setLoading(false))
     },[id])
+
+    if(invalidItem){
+      return <div>
+        <h3>El producto no existe!</h3>
+        <Link to='/' className='btn btn-dark'> Volver a home</Link>
+      </div>
+    }
 
   return (
     <div>
-        {loading ? <Loader/> : <ItemDetail producto={producto}/>}
+      {loading 
+       ? <Loader/> 
+       : <ItemDetail producto={producto}/> }
     </div>
   )
 }

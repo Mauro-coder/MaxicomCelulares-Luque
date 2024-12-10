@@ -40,9 +40,9 @@ const ItemListContainer = ({ greeting, texto }) => {
   // }
 
   return (
-    <div className="itemContainer">
+    <div className="itemContainer" style={{height:'100%', paddingBottom:'60px', boxSizing:'border-box'}}>
       {/* <button onClick={addData}>Agregar a Firebase</button> */}
-      <h1 className="text-center">{greeting}</h1>
+      <h1 className="text-center">{greeting}: <span style={{textTransform:'capitalize', color:'grey'}}>{productosId}</span></h1>
       <p className="pTexto">{texto}</p>
       {loading ? <Loader/>: <ItemList products={products} />}
     </div>

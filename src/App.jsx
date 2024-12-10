@@ -8,6 +8,7 @@ import { CartProvider } from "./context/CartContext";
 import CartView from "./components/CartView";
 import Error from "./components/Error";
 import Checkout from "./components/Checkout";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
         <Route path='/checkout' element={<Checkout/>}/>
         <Route path='*' element={<Error/>}/>
       </Routes>
+      <Footer/>
     </BrowserRouter>
     </CartProvider>
   );

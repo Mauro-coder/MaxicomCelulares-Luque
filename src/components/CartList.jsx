@@ -20,14 +20,15 @@ const CartList = () => {
       });
     }
   return (
-    <div>
+    <div style={{padding:'30px'}}>
         {cart.map((prod)=> <CartItem key={prod.id} prod={prod}/>)}
         <span>Total a pagar: ${cartTotal()},00</span>
         <div  style={{
               display: 'flex',
               justifyContent: 'space-between',
               alignItems: 'center',
-              padding: '2rem',
+              padding: '60px',
+              height: '100%', 
             }}>
             <button className='btn btn-danger' onClick={clearCart}> Borrar Carrito</button>
             <Link className='btn btn-success' to={'/checkout'}>Terminar Compra</Link>

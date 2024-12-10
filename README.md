@@ -2,7 +2,7 @@
 
 Este proyecto fue realizado en el curso de CoderHouse, orientado en la utilizacion de React para la creacion de un Ecommerce dedicado a la venta de celulares y diversos accesorios, la misma cuenta con distintas interacciones como los carts de cada producto, el agregado de los mismos a un carrito de compras para su posterior confirmación de la compra mediante un formulario, todo esto se carga a una base de datos desarrollada en Firebase donde se hace un control de stock y se cargan los datos brindados por el cliente.
 
-![image](/public/...)
+![image](/public/maxicom_celulares.gif)
 
 ### Instalación ⚙️
 
