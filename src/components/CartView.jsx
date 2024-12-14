@@ -6,17 +6,17 @@ import { useCart } from '../context/CartContext'
 
 const CartView = () => {
     const {cart} = useCart()
-    return(
-        <div>
-            {!cart.length 
-            ? <EmptyCart/> 
-            : <div>
-                <h2>Tu Carrito</h2>
-                <CartList/>
+    return (
+        <div className="cart-container">
+          {!cart.length ? (
+            <EmptyCart />
+          ) : (
+            <div>
+              <h2>Tu Carrito</h2>
+              <CartList />
             </div>
-            }
+          )}
         </div>
-    )
-}
-
+      );
+    };
 export default CartView

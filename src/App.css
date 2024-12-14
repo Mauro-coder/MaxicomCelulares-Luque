@@ -5,7 +5,7 @@ html, body {
 }
 
 main {
-  flex: 1; /* El contenido principal ocupa el espacio restante */
+  flex: 1;
   padding: 20px;
 }
 
@@ -17,6 +17,102 @@ img{
 .pTexto{
   text-align: center;
   color: #172c66;
+}
+
+/* Contenedor de todos los productos */
+.item-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Tarjeta del producto */
+.item-card {
+  width: 100%;
+  max-width: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  height: 400px;
+}
+
+/* Efecto hover para la tarjeta */
+.item-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Imagen del producto */
+.item-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Nombre del producto */
+.item-card h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Precio del producto */
+.item-card p {
+  font-size: 1rem;
+  color: #28a745;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Botón "Ver más" */
+.item-card .btn-primary {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin-top: auto;
+  width: 100%;
+}
+
+/* Efecto hover del botón */
+.item-card .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .item-card {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .item-card img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .item-list {
+    gap: 10px;
+  }
+
+  .item-card {
+    max-width: 100%;
+  }
 }
 
 .emptyCart{
@@ -68,6 +164,150 @@ img{
   }
 }
 
+/* Contenedor principal del carrito */
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  min-height: 80vh;
+  gap: 20px;
+  background-color: #f8f9fa;
+}
+
+/* Título del carrito */
+.cart-container h2 {
+  font-size: 2rem;
+  color: #343a40;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Estilo para el mensaje cuando el carrito está vacío */
+.empty-cart-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #6c757d;
+  margin-top: 20px;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+  .cart-container {
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .cart-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .empty-cart-message {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .empty-cart-message {
+    font-size: 0.9rem;
+  }
+}
+
+/* Contenedor principal del ítem */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+  gap: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-item img {
+  width: 10rem;
+}
+
+.cart-item span {
+  font-size: 1rem;
+  flex: 1;
+  text-align: center;
+}
+
+.cart-item button {
+  flex-shrink: 0;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .cart-item img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .cart-item span {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-item {
+    padding: 1rem;
+  }
+
+  .cart-item span {
+    font-size: 0.9rem;
+  }
+
+  .cart-item button {
+    width: 100%;
+  }
+}
+
+
+.cart-list-container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-total-container {
+  margin-top: 20px;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.cart-total-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+  gap: 10px;
+}
+
+
+
 .orderConfirmation {
   display: flex;
   flex-direction: column;
@@ -78,14 +318,14 @@ img{
   max-width: 400px;
   border: 1px solid #28a745;
   border-radius: 10px;
-  background-color: #e9f7ef; /* Fondo verde claro */
+  background-color: #e9f7ef;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .orderConfirmation h4 {
   font-size: 24px;
   margin-bottom: 10px;
-  color: #28a745; /* Verde para resaltar éxito */
+  color: #28a745;
 }
 
 .orderConfirmation h5 {

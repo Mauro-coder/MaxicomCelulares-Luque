@@ -19,22 +19,26 @@ const CartList = () => {
         } else if (result.isDenied) { /* empty */ }
       });
     }
-  return (
-    <div style={{padding:'30px'}}>
-        {cart.map((prod)=> <CartItem key={prod.id} prod={prod}/>)}
-        <span>Total a pagar: ${cartTotal()},00</span>
-        <div  style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              padding: '60px',
-              height: '100%', 
-            }}>
-            <button className='btn btn-danger' onClick={clearCart}> Borrar Carrito</button>
-            <Link className='btn btn-success' to={'/checkout'}>Terminar Compra</Link>
+    return (
+      <div className="cart-list-container">
+        {cart.map((prod) => (
+          <CartItem key={prod.id} prod={prod} />
+        ))}
+        <div className="cart-total-container">
+          <span className="cart-total-text">
+            Total a pagar: <b>${cartTotal()},00</b>
+          </span>
+          <div className="button-container">
+            <button className="btn btn-danger" onClick={clearCart}>
+              Borrar Carrito
+            </button>
+            <Link className="btn btn-success" to={"/checkout"}>
+              Terminar Compra
+            </Link>
+          </div>
         </div>
-    </div>
-  )
-}
+      </div>
+    );
+  };
 
 export default CartList
