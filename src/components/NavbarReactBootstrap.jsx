@@ -7,9 +7,9 @@ import { NavLink } from 'react-router-dom';
 
 function NavbarReactBootstrap() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-body-secondary">
       <Container>
-        <Navbar.Brand as={NavLink} to='/'>Maxicom Celulares</Navbar.Brand>
+        <Navbar.Brand as={NavLink} to='/'><img src='/cellphone.svg' alt='cellphone' style={{width: '40px', height:'40px'}} className=''/>Maxicom Celulares</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
